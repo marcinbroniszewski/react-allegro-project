@@ -1,0 +1,10 @@
+.cart {
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .cart {
+        width: 3.5rem;
+    margin-left: 3rem;
+    }
+}

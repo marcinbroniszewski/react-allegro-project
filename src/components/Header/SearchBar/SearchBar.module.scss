@@ -1,0 +1,38 @@
+.search {
+display: flex;
+justify-content: center;
+margin-top: 1rem;
+
+&__input {
+    width: 80%;
+    height: 4rem;
+    padding-left: 1rem;
+ border-radius: 2px;
+ border: 1px solid rgb(170, 170, 170);
+ border-right-style: none ;
+}
+
+&__select {
+    height: 4rem;
+}
+}
+
+
+@media (min-width: 768px) {
+    .search {
+
+        &__select {
+            border: 1px solid rgb(170, 170, 170);
+            border-right-style: none;
+            color: rgb(34, 34, 34);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .search {
+        &__input {
+           width: 100%;
+        }
+    }
+}

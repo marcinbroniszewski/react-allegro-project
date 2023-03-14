@@ -1,0 +1,28 @@
+.acc {
+display: inline-block;
+margin-left: 3rem;
+font-size: 1.4rem;
+    cursor: pointer;
+    
+    &__smart-text {
+        position: relative;
+        font-size: 1.3rem;
+        color: rgb(101, 101, 101);
+    }
+
+    &__allegro-text {
+        width: 10rem;
+        display: flex;
+    }
+    
+    &__smart-icon {
+        position: absolute;
+bottom: 0;
+padding-left: 4px;
+ }
+
+ &__chevron {
+    margin-left: 0.7rem;
+ width: 1.5rem;
+ }
+}
