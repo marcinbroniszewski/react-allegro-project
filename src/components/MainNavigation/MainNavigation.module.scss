@@ -1,0 +1,41 @@
+.nav {
+    border: 1px solid #ddd;
+
+&__container {
+    display: flex;
+}
+
+    &__btn {
+        padding-right: 1.6rem;
+        padding-left: 2.4rem;
+        height: 4.8rem;
+        font-size: 1.4rem;
+        color: rgb(34, 34, 34);
+        background: none;
+        border: 1px solid #ddd;
+        border-bottom-style: none;
+        border-top-style: none;
+        cursor: pointer;
+    }
+
+    &__links-box {
+padding-left: 3.6rem;
+    }
+    a {
+        padding-right: 1.4rem;
+        line-height: 4.8rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: rgb(0, 134, 115);
+        transition: 0.3s;
+    }
+
+    a:hover {
+color: rgb(15, 207, 182);
+    }
+
+    svg {
+        margin-left: 1.5rem;
+        color: #8f8f8f;
+        }
+}
