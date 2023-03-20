@@ -2,7 +2,9 @@
   font-size: 62.5%;
 }
 
-* {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,6 +22,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eceff1;
 }
 
 code {
@@ -28,3 +31,7 @@ code {
 }
 
 
+ul.slick-dots {
+  bottom: 0;
+  padding: 8px 0;
+}
