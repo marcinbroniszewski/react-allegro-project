@@ -37,6 +37,8 @@ const settings = {
     prevArrow: <PrevArrow />,
 }
 
+
+
 function NextArrow(props: any) {
 	const { onClick } = props
 	return (

@@ -1,0 +1,13 @@
+.container {
+
+    &__product-img {
+        height: 160px;
+        width: 160px;
+    }
+
+    &__product-price {
+        font-size: 27px;
+        font-weight: 500;
+        color: rgb(58, 78, 88);
+    }
+}
