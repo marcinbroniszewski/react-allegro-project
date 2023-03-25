@@ -1,8 +1,12 @@
 import React from 'react'
 import styles from './Button.module.scss'
 
-export default function Button() {
+interface Props {
+  text: string
+}
+
+export default function Button(props: Props) {
   return (
-    <button className={styles.btn}>Przycisk</button>
+    <button className={styles.btn}>{props.text}</button>
   )
 }

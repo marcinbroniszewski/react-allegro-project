@@ -19,7 +19,7 @@ const mobileStructure = (
 		<div className={styles['carousel-item__box']}>
 			<h3 className={styles['carousel-item__header']}>{props.item.title}</h3>
 			<p className={styles['carousel-item__text']}>{props.item.description}</p>
-			<Button />
+			<Button text='zobacz więcej'/>
 		</div>
 	</div>
 
@@ -30,7 +30,7 @@ const tabletDesktopStructure = (<>
 			<div className={styles['carousel-item__box']}>
 				<h3 className={styles['carousel-item__header']}>{props.item.title}</h3>
 				<p className={styles['carousel-item__text']}>{props.item.description}</p>
-				<Button />
+				<Button text='zobacz więcej'/>
 			</div>
 		</div>
 		<div className={styles['carousel-item__right']}>

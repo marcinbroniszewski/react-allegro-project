@@ -1,0 +1,61 @@
+.dropdown {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 0;
+	width: 286px;
+    margin-top: 0.5rem;
+	padding: 1.6rem;
+	background-color: white;
+	border: 0.5px solid rgb(117, 117, 117);
+	z-index: 999;
+	text-align: center;
+
+	&__img {
+		height: 183px;
+		width: 254px;
+	}
+
+	&__header {
+		margin-bottom: 8px;
+		font-size: 2.1rem;
+		font-weight: 500;
+	}
+
+	&__small-text {
+		margin-bottom: 1.5rem;
+		color: rgb(118, 118, 118);
+		font-size: 1.2rem;
+		line-height: 2.1rem;
+	}
+
+	&__reg-text {
+        margin-top: 1.7rem;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		color: rgb(34, 34, 34);
+	}
+
+	&__reg-link {
+		text-decoration: none;
+		color: rgb(0, 167, 144);
+        transition: color .3s;
+	}
+
+    &__reg-link:hover  {
+        color: rgb(33, 211, 107);
+    }
+}
+
+@media (min-width: 768px) {
+    .dropdown {
+        right: 2rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .dropdown {
+        right: 18vw;
+    }
+}

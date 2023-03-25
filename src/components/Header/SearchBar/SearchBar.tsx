@@ -19,7 +19,7 @@ export default function SearchBar() {
 				<option value='categories'>Wszystkie kategorie</option>
 				<option value='home-and-garden'>Dom i ogród</option>
 			</select>
-			<Button />
+			<Button text='szukaj'/>
 		</>
 	)
 
