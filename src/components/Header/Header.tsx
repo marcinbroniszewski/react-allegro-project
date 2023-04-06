@@ -5,6 +5,7 @@ import logo from './img/logo-allegro.svg'
 import SearchBar from './SearchBar/SearchBar'
 import Cart from '../Cart/Cart'
 import Account from './Account/Account'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
 	const isMobile = useMediaQuery({ maxWidth: 767 })
@@ -14,7 +15,7 @@ export default function Header() {
 	const mobileTabletStructure = (
 		<>
 			<div className={styles['header__mobile-container']}>
-				<img src={logo} alt='logo allegro' className={styles['header__logo']} />
+				<Link to={''}><img src={logo} alt='logo allegro' className={styles['header__logo']} /></Link>
 				<div className={styles['header__icons']}>
 					<Cart />
 					<Account />
@@ -26,7 +27,7 @@ export default function Header() {
 
 	const desktopStructure = (
 		<div className={styles['header__desktop-container']}>
-			<img src={logo} alt='logo allegro' className={styles['header__logo']} />
+			<Link to={''}><img src={logo} alt='logo allegro' className={styles['header__logo']} /></Link>
 			<SearchBar />
 			<div className={styles['header__icons-box']}>
 				<Cart />

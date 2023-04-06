@@ -34,7 +34,7 @@ export default function Account() {
 	)
 
 const toggleDropdown = () => { 
-	setIsClicked(!isClicked)
+	setIsClicked(prevIsClicked => !prevIsClicked)
  }
 
  useEffect(() => {
@@ -60,7 +60,7 @@ const toggleDropdown = () => {
 				{isMobile && mobileTabletStructure}
 				{isTablet && mobileTabletStructure}
 				{isDesktop && desktopStructure}
-			{isClicked && <Dropdown onClick={handleDropdownClick}/>}
+			{isClicked && <Dropdown onClick={handleDropdownClick} closeDropdown={toggleDropdown} />}
 			</div>
 	)
 }
