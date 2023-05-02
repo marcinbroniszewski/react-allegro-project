@@ -1,7 +1,12 @@
 .nav {
+    position: relative;
     margin-bottom: 2rem;
     background-color: #fff;
     border: 1px solid #ddd;
+    
+    .active {
+        transform: rotateX(180deg);      
+    }
 
 &__container {
     display: flex;

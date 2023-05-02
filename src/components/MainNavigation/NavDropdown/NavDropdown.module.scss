@@ -1,0 +1,27 @@
+.dropdown {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	display: flex;
+	background-color: #fff;
+	z-index: 999;
+
+
+    h3::first-letter, li::first-letter {
+        text-transform: capitalize;
+    }
+
+	li {
+		list-style: none;
+		font-size: 1.4rem;
+	}
+
+    a {
+        color: black;
+    }
+
+	&__categories,
+	&__subcategories {
+		margin: 1rem;
+	}
+}

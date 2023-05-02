@@ -25,4 +25,8 @@ padding-left: 4px;
     margin-left: 0.7rem;
  width: 1.5rem;
  }
+
+ &__chevron-clicked {
+    transform: rotateX(180deg);
+ }
 }

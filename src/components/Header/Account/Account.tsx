@@ -8,8 +8,6 @@ import Dropdown from './Dropdown/Dropdown'
 import { useState, useEffect, useRef } from 'react'
 
 
-
-
 export default function Account() {
 	const [isClicked, setIsClicked] = useState(false)
 	const dropdownRef = useRef<HTMLDivElement>(null)
@@ -21,6 +19,9 @@ export default function Account() {
 
 	const mobileTabletStructure = <img src={userIcon} alt='ikona użytkownika' />
 
+
+const chevronClasses = !isClicked ? styles['acc__chevron'] : `${styles['acc__chevron']} ${styles['acc__chevron-clicked']}`
+
 	const desktopStructure = (
 		<>
 			<span className={styles['acc__smart-text']}>
@@ -28,7 +29,7 @@ export default function Account() {
 			</span>
 			<br />
 			<span className={styles['acc__allegro-text']}>
-				Moje allegro <img src={chevronDown} alt='ikona strzałki w dół' className={styles['acc__chevron']} />
+				Moje allegro <img src={chevronDown} alt='ikona strzałki w dół' className={chevronClasses} />
 			</span>
 		</>
 	)
