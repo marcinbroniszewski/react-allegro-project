@@ -1,0 +1,105 @@
+.product {
+	&__header,
+	&__description {
+		margin-bottom: 2rem;
+		background-color: #fff;
+	}
+
+	&__header {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__h1 {
+		padding-bottom: 25px;
+		font-size: 2.1rem;
+		font-family: 'Roboto', sans-serif;
+	}
+	&__img {
+		width: 90%;
+	}
+
+	&__description {
+		padding: 16px;
+	}
+
+	&__text {
+		margin-bottom: 16px;
+		font-size: 21px;
+		font-weight: 500;
+	}
+
+	&__h2 {
+		margin-bottom: 1.5rem;
+		font-size: 1.8rem;
+	}
+
+	&__description-text {
+		font-size: 1.6rem;
+	}
+}
+
+.buy {
+	padding: 18px;
+	background-color: #fff;
+
+	button[disabled] {
+		filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(84%) contrast(83%);
+	}
+
+	&__h2 {
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+
+	&__price {
+		margin-right: 1rem;
+		font-size: 2.7rem;
+		font-weight: 500;
+		color: rgb(58, 78, 88);
+	}
+
+	&__btns-box {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__btns-box button {
+		margin-bottom: 1rem;
+	}
+
+    &__counter-box {
+        display: flex;
+    }
+
+	&__increment,
+	&__decrement {
+        height: 40px;
+        width: 40px;
+		padding: 4px;
+		background: none;
+		border: 1px solid rgb(170, 170, 170);
+        border-radius: 2px;
+	}
+
+    &__increment {
+        border-left-style: none;
+    }
+
+    &__decrement {
+        border-right-style: none;
+    }
+
+    &__counter {
+        height: 40px;
+        padding: 8px;
+        font-size: 1.4rem;
+        text-align: center;
+        color: rgb(34, 34, 34);
+        border: 1px solid rgb(170, 170, 170);
+    }
+}

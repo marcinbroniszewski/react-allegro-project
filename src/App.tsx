@@ -6,6 +6,7 @@ import RootLayout from './pages/Root';
 import Login from './pages/Login';
 import ErrorPage from './pages/Error';
 import Category, {loader as categoryLoader} from './pages/Category';
+import Product, {loader as productLoader} from './pages/Product';
 
 
 const categoriesLoader = async () => { 
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     {path: ':categoryId', element: <Category />, loader: categoryLoader},
     {path: ':categoryId/:subcategoryId', element: <Category />},
     {path: ':categoryId/:subcategoryId/:subcategoryId2', element: <Category />, loader: categoryLoader},
+    {path: ':categoryId/:subcategoryId/:subcategoryId2/:product', element: <Product />, loader: productLoader}
   ]},
 ])
 
