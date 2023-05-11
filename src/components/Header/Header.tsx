@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 import styles from './Header.module.scss'
 import logo from './img/logo-allegro.svg'
 import SearchBar from './SearchBar/SearchBar'
-import Cart from '../Cart/Cart'
+import Cart from '../Cart/CartIcon/CartIcon'
 import Account from './Account/Account'
 import { Link } from 'react-router-dom'
 

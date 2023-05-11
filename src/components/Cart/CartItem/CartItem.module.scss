@@ -1,0 +1,21 @@
+.product {
+
+&__img {
+    height: 96px;
+    width: 96px;
+}
+
+    &__bin {
+        display: inline-block;
+        padding: 4px;
+        height: 32px;
+        width: 32px;
+        background-image: url('https://assets.allegrostatic.com/metrum/icon/trash-bin-b5de8ba85e.svg');
+    }
+
+    &__bin-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}

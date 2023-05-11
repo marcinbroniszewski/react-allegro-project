@@ -72,34 +72,4 @@
 		margin-bottom: 1rem;
 	}
 
-    &__counter-box {
-        display: flex;
-    }
-
-	&__increment,
-	&__decrement {
-        height: 40px;
-        width: 40px;
-		padding: 4px;
-		background: none;
-		border: 1px solid rgb(170, 170, 170);
-        border-radius: 2px;
-	}
-
-    &__increment {
-        border-left-style: none;
-    }
-
-    &__decrement {
-        border-right-style: none;
-    }
-
-    &__counter {
-        height: 40px;
-        padding: 8px;
-        font-size: 1.4rem;
-        text-align: center;
-        color: rgb(34, 34, 34);
-        border: 1px solid rgb(170, 170, 170);
-    }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import CategoryContent from '../components/Category/CategoryContent'
 
-export default function Category() {
+export default function CategoryPage() {
 
   return (
     <CategoryContent />
