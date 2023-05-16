@@ -1,4 +1,3 @@
-import React, {useEffect} from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/Home';
 import RegistrationPage from './pages/Registration';
@@ -8,8 +7,6 @@ import ErrorPage from './pages/Error';
 import CategoryPage, {loader as categoryLoader} from './pages/Category';
 import ProductPage, {loader as productLoader} from './pages/Product';
 import CartPage from './pages/Cart';
-import { useSelector } from 'react-redux';
-import { CartItemInterface } from './store/cart-slice';
 
 const categoriesLoader = async () => { 
   const response = await fetch('https://allegro-642ad-default-rtdb.europe-west1.firebasedatabase.app/categories.json')
@@ -32,18 +29,9 @@ const router = createBrowserRouter([
   ]},
 ])
 
-interface CartState {
-	items: CartItemInterface[]
-}
 
 function App() {
 
-  const cart = useSelector((state: {cart: CartState}) => state.cart.items)
-
-  useEffect(() => {
-  localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart])
-  
   return (
 
 <RouterProvider router={router}/>

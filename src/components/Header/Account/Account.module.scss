@@ -1,32 +1,37 @@
 .acc {
-display: inline-block;
-margin-left: 3rem;
-font-size: 1.4rem;
-    cursor: pointer;
-    
-    &__smart-text {
-        position: relative;
-        font-size: 1.3rem;
-        color: rgb(101, 101, 101);
-    }
+	position: relative;
+	display: inline-block;
+	margin-left: 2rem;
+	font-size: 1.4rem;
+	cursor: pointer;
 
-    &__allegro-text {
-        width: 10rem;
-        display: flex;
-    }
-    
-    &__smart-icon {
-        position: absolute;
-bottom: 0;
-padding-left: 4px;
- }
+	&__smart-text {
+		position: relative;
+		font-size: 1.3rem;
+		color: rgb(101, 101, 101);
+	}
 
- &__chevron {
-    margin-left: 0.7rem;
- width: 1.5rem;
- }
+	&__smart-user {
+		color: rgb(255, 90, 0);
+	}
 
- &__chevron-clicked {
-    transform: rotateX(180deg);
- }
+	&__allegro-text {
+		width: 10rem;
+		display: flex;
+	}
+
+	&__smart-icon {
+		position: absolute;
+		bottom: 0;
+		padding-left: 4px;
+	}
+
+	&__chevron {
+		margin-left: 0.7rem;
+		width: 1.5rem;
+	}
+
+	&__chevron-clicked {
+		transform: rotateX(180deg);
+	}
 }

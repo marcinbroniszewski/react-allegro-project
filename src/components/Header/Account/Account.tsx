@@ -6,9 +6,12 @@ import { useMediaQuery } from 'react-responsive'
 import userIcon from './img/account-user.svg'
 import Dropdown from './Dropdown/Dropdown'
 import { useState, useEffect, useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { AuthStateInterface } from '../../../store/auth-slice'
 
 
 export default function Account() {
+	const user = useSelector((state: {auth: AuthStateInterface}) => state.auth.user)
 	const [isClicked, setIsClicked] = useState(false)
 	const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -21,17 +24,17 @@ export default function Account() {
 
 
 const chevronClasses = !isClicked ? styles['acc__chevron'] : `${styles['acc__chevron']} ${styles['acc__chevron-clicked']}`
-
+const smartClasses = !user ? styles['acc__smart-text'] : `${styles['acc__smart-text']} ${styles['acc__smart-user']}`
 	const desktopStructure = (
-		<>
-			<span className={styles['acc__smart-text']}>
-				bądź <img src={smartIcon} alt='smart icon' className={styles['acc__smart-icon']} />
+		<div>
+			<span className={smartClasses}>
+				{user? 'jesteś' : 'bądź'} <img src={smartIcon} alt='smart icon' className={styles['acc__smart-icon']} />
 			</span>
 			<br />
 			<span className={styles['acc__allegro-text']}>
-				Moje allegro <img src={chevronDown} alt='ikona strzałki w dół' className={chevronClasses} />
+				{user ? user.email : 'Moje allegro'} <img src={chevronDown} alt='ikona strzałki w dół' className={chevronClasses} />
 			</span>
-		</>
+		</div>
 	)
 
 const toggleDropdown = () => { 

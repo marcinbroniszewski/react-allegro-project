@@ -1,6 +1,3 @@
-// $main-font-color: rgb(109, 109, 109);
-// $light-font-color: rgb(102, 102, 102);
-
 .header {
 	padding: 1rem;
 	background-color: #fff;
@@ -30,16 +27,17 @@
 @media (min-width: 992px) {
 	.header {
 		&__logo {
-		margin-left: 8rem;
+		margin-left: 7rem;
 		}
 
 		&__desktop-container {
 			display: grid;
-			gap: 1rem;
-			grid-template-columns: 30% 50% 20%;
+			grid-template-columns: 25% 50% 25%;
 		}
 
 		&__icons-box {
+			margin-top: 1rem;
+			margin-left: 3.5rem;
 			width: 15rem;
 			display: flex;
 			justify-content: space-around;
@@ -51,6 +49,14 @@
 	.header {
 		&__desktop-container {
 			grid-template-columns: 20% 50% 30%;
+			gap: 1rem;
+		}
+
+		&__logo-box {
+			margin-right: auto;
+		}
+		&__logo {
+margin-right: 1rem;
 		}
 
 		&__icons-box {

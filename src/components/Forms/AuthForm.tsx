@@ -70,7 +70,6 @@ export default function AuthForm({ authFunction, text, linkText, link, anchor }:
   const passInputClasses = passHasError ? `${styles['form__pass-input']} ${styles.error}` :  `${styles['form__pass-input']}`
 const showPassBtnClasses = passHasError ?`${styles['form__show-pass']} ${styles.error}` : `${styles['form__show-pass']}`
 
-
 	return (
 		<div className={styles.form}>
 			<h1 className={styles['form__header']}>{text}</h1>

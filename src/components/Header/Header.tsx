@@ -26,14 +26,16 @@ export default function Header() {
 	)
 
 	const desktopStructure = (
-		<div className={styles['header__desktop-container']}>
-			<Link to={''}><img src={logo} alt='logo allegro' className={styles['header__logo']} /></Link>
-			<SearchBar />
-			<div className={styles['header__icons-box']}>
-				<Cart />
-				<Account />
+			<div className={styles['header__desktop-container']}>
+				<div className={styles['header__logo-box']}>
+					<Link to={''}><img src={logo} alt='logo allegro' className={styles['header__logo']} /></Link>
+				</div>
+				<SearchBar />
+				<div className={styles['header__icons-box']}>
+					<Cart />
+					<Account />
+				</div>
 			</div>
-		</div>
 	)
 
 	return (

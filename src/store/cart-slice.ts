@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
 export interface CartItemInterface {
 	id: string
@@ -13,7 +15,7 @@ export interface CartState {
 	items: CartItemInterface[]
 }
 
-const initialState: CartState = { items: JSON.parse(localStorage.getItem('cart')!) || [] }
+const initialState: CartState = { items: [] }
 
 const cartSlice = createSlice({
 	name: 'cart',
@@ -27,8 +29,6 @@ const cartSlice = createSlice({
 			} else {
 				state.items.push(action.payload)
 			}
-
-			localStorage.setItem('cart', JSON.stringify(state.items))
 		},
 		removeFromCart(state, action) {
 			const existingItem = state.items.find(item => item.id === action.payload.id)
@@ -53,8 +53,14 @@ const cartSlice = createSlice({
 				state.items = filteredArray
 			}
 		}
+		
 	},
 })
 
-export default cartSlice.reducer
+const persistConfig = {
+	key: 'cart',
+	storage,
+}
+
+export default persistReducer(persistConfig, cartSlice.reducer)
 export const { addToCart, removeFromCart, updateItemQuantity, deleteFromCart } = cartSlice.actions

@@ -1,8 +1,8 @@
 .dropdown {
+	position: absolute;
+	right: -32px;
 	display: flex;
 	flex-direction: column;
-	position: absolute;
-	right: 0;
 	width: 286px;
     margin-top: 0.5rem;
 	padding: 1.6rem;
@@ -52,15 +52,25 @@ a {
 }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 350px)  {
+	.dropdown {
+		right: -50px;
+	}
+}
+@media (min-width: 350px)  {
+	.dropdown {
+		right: -50px;
+	}
+}
+@media (min-width: 420px)  {
+	.dropdown {
+		right: -75px;
+	}
+}
+
+@media (min-width: 500px) {
     .dropdown {
-        right: 2rem;
-        margin-top: 1rem;
+        right: -100px;
     }
 }
 
-@media (min-width: 1600px) {
-    .dropdown {
-        right: 18vw;
-    }
-}
