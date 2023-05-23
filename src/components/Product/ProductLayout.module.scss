@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .product {
 	&__header,
 	&__description {
@@ -59,7 +61,7 @@
 		margin-right: 1rem;
 		font-size: 2.7rem;
 		font-weight: 500;
-		color: rgb(58, 78, 88);
+		color: $price-color;
 	}
 
 	&__btns-box {

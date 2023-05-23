@@ -5,6 +5,7 @@ import QuantityInput from '../UI/QuantityInput';
 import { useState} from 'react';
 import { addToCart } from '../../store/cart-slice';
 import { useDispatch } from 'react-redux';
+import ProductModal from '../UI/ProductModal';
 
 
 interface ProductContentData {
@@ -12,9 +13,11 @@ interface ProductContentData {
 }
 
 export default function ProductLayout() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const data = useLoaderData() as ProductContentData;
 const [quantity, setQuantity] = useState('1')
 const dispatch = useDispatch()
+
 
 const onAddToCartHandler = () => { 
 dispatch(addToCart({
@@ -25,9 +28,16 @@ dispatch(addToCart({
 totalPrice: +data.price * +quantity,
   img: data.img
 }))
+setIsModalOpen(true)
+ }
+
+ const closeModalHandler = () => {  
+  setIsModalOpen(false)
  }
 
   return (
+    <>
+  {isModalOpen && <ProductModal name={data.title} price={data.price} quantity={+quantity} totalPrice={+data.price * +quantity} img={data.img} closeModal={closeModalHandler} />}
     <div className={styles.product}>
       <section className={styles['product__header']}>
         <h1 className={styles['product__h1']}>{data.title}</h1>
@@ -55,5 +65,6 @@ totalPrice: +data.price * +quantity,
         </div>
       </section>
     </div>
+    </>
   );
 }

@@ -1,5 +1,4 @@
-$title-dark: rgb(34, 34, 34);
-$price-color: rgb(58, 78, 88);
+@import '../../../variables';
 
 .dropdown {
 	position: absolute;
@@ -23,7 +22,7 @@ $price-color: rgb(58, 78, 88);
 		&__h4 {
             font-size: 1.7rem;
             font-weight: 700;
-			color: $title-dark;
+			color: $main-dark-font;
 		}
 
         &__value-box {
@@ -90,7 +89,7 @@ text-align: center;
 			margin: 16px 8px 0;
 			width: 200px;
 			font-size: 1.2rem;
-color: $title-dark;
+color: $main-dark-font;
 overflow-wrap: break-word;
 		}
 &__price-box {
