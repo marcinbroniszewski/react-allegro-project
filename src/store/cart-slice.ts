@@ -7,15 +7,16 @@ export interface CartItemInterface {
 	name: string
 	price: number
 	quantity: number
-	totalPrice: number
 	img: string
 }
 
 export interface CartState {
-	items: CartItemInterface[]
+	items: CartItemInterface[],
+	totalPrice: number
 }
 
-const initialState: CartState = { items: [] }
+const initialState: CartState = { items: [],
+totalPrice: 0 }
 
 const cartSlice = createSlice({
 	name: 'cart',
@@ -25,22 +26,26 @@ const cartSlice = createSlice({
 			const existingItem = state.items.find(item => item.id === action.payload.id)
 
 			if (existingItem) {
-				existingItem.quantity++
+				existingItem.quantity += action.payload.quantity
 			} else {
 				state.items.push(action.payload)
 			}
+
+			state.totalPrice += action.payload.price * action.payload.quantity
 		},
 		removeFromCart(state, action) {
 			const existingItem = state.items.find(item => item.id === action.payload.id)
 
 			if (existingItem) {
 				existingItem.quantity--
+				state.totalPrice -= action.payload.price
 			}
 		},
 		updateItemQuantity(state, action) {
 			const existingItem = state.items.find(item => item.id === action.payload.id)
 
 			if (existingItem) {
+				state.totalPrice += (action.payload.quantity - existingItem.quantity) * existingItem.price;
 				existingItem.quantity = action.payload.quantity
 			}
 		},
@@ -48,6 +53,7 @@ const cartSlice = createSlice({
 			const existingItem = state.items.find(item => item.id === action.payload.id)
 
 			if (existingItem) {
+				state.totalPrice -= existingItem.quantity * existingItem.price
 				const filteredArray = state.items.filter(item => item.id !== existingItem.id) 
 
 				state.items = filteredArray

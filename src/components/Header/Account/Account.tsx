@@ -17,8 +17,8 @@ export default function Account() {
 
 
 	const isMobile = useMediaQuery({ maxWidth: 767 })
-	const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-	const isDesktop = useMediaQuery({ minWidth: 992 })
+	const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 })
+	const isDesktop = useMediaQuery({ minWidth: 1024 })
 
 	const mobileTabletStructure = <img src={userIcon} alt='ikona użytkownika' />
 

@@ -14,6 +14,10 @@
 		cursor: pointer;
 	}
 
+	&__icons-box {
+		display: flex;
+	}
+
 }
 
 @media (min-width: 768px) {
@@ -24,7 +28,7 @@
 	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
 	.header {
 		&__logo {
 		margin-left: 7rem;
@@ -37,10 +41,12 @@
 
 		&__icons-box {
 			margin-top: 1rem;
-			margin-left: 3.5rem;
+			margin-left: 5rem;
 			width: 15rem;
-			display: flex;
-			justify-content: space-around;
+		}
+
+		&__cart-container {
+			position: relative;
 		}
 	}
 }

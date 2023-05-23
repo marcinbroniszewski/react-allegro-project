@@ -9,8 +9,8 @@ interface CartState {
 	items: CartItemInterface[]
 }
 export default function CartLayout() {
-	const cart = useSelector((state: {cart: CartState}) => state.cart.items)
 	const user = useSelector((state: {auth: AuthStateInterface}) => state.auth.user)
+	const cart = useSelector((state: {cart: CartState}) => state.cart.items)
 	const arrayOfPrices = cart.map(item => item.quantity * item.price)
 	const totalPrice = arrayOfPrices.reduce((a: number, b: number) => a + b, 0).toFixed(2)
 	const navigate = useNavigate()
