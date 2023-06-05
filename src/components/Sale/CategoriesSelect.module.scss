@@ -1,0 +1,114 @@
+@import '../../_variables.scss';
+
+.category-select, .subcategory-select, .sub-subcategory-select {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.5rem;
+    box-shadow: rgba($color: rgb(117, 117, 117), $alpha: 0.1) 0px 2px 6px 0px;
+
+    &__h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $main-dark-font;
+    }
+
+    &__h2::first-letter {
+text-transform: capitalize;
+    }
+
+    &__prev-btn {
+        cursor: pointer;
+    }
+
+    &__arrow {
+        padding: 1rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 5%;
+        color: $main-dark-font;
+    }
+}
+
+.categories {
+    &__category {
+padding: 12px 20px;
+border-bottom: 1px solid #f7f7f7;
+background-image: url('https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/c7650ae8/assets/right.252613e3.svg');
+background-repeat: no-repeat;
+background-position: right 6% center;
+    }
+
+    &__subcategory, &__sub-subcategory {
+        padding: 12px 20px;
+border-bottom: 1px solid #f7f7f7;
+    }
+
+    &__category, &__subcategory, &__sub-subcategory {
+        list-style: none;
+    }
+
+    &__category-btn, &__subcategory-btn, &__sub-subcategory-btn  {
+        height: 40px;
+        width: 100%;
+        padding-left: 3rem;
+        text-align: left;
+        background: none;
+        border: none;
+font-size: 1.7rem;
+letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    &__category-btn::first-letter, &__subcategory-btn::first-letter, &__sub-subcategory-btn::first-letter  {
+        text-transform: capitalize;
+    }
+    &__subcategory-btn, &__sub-subcategory-btn {
+font-size: 1.4rem;
+    }
+
+}
+
+.stepback {
+    padding: 12px 24px;
+    border-bottom: 1px solid #f7f7f7;
+    background-image: url('https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/8fa95fac/assets/left-green.2434d136.svg');
+    background-repeat: no-repeat;
+    background-position: left 3rem center;
+
+    &__button {
+        height: 40px;
+        width: 100%;
+        padding-left: 3rem;
+        text-align: left;
+        background: none;
+        border: none;
+font-size: 1.3rem;
+font-weight: 700;
+letter-spacing: .03rem;
+text-transform: uppercase;
+text-align: left;
+color: #2bb9a3;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 960px) {
+    .category-select, .subcategory-select, .sub-subcategory-select {
+        position: static;
+        margin-top: 1rem;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 8px;
+    }
+}

@@ -22,7 +22,7 @@ export default function CartDropdown(props: Props) {
 				<h4 className={styles['header__h4']}>Twój koszyk</h4>
 				<div className={styles['header__value-box']}>
 					<span className={styles['header__value-text']}>wartość koszyka</span>
-					<span className={styles['header__value']}>{totalPrice} zł</span>
+					<span className={styles['header__value']}>{totalPrice.toFixed(2)} zł</span>
 				</div>
 			</div>
 			<div className={styles.main}>

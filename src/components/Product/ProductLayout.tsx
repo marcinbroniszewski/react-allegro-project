@@ -7,7 +7,6 @@ import { addToCart } from '../../store/cart-slice';
 import { useDispatch } from 'react-redux';
 import ProductModal from '../UI/ProductModal';
 
-
 interface ProductContentData {
   [key: string]: any;
 }
@@ -17,7 +16,6 @@ export default function ProductLayout() {
   const data = useLoaderData() as ProductContentData;
 const [quantity, setQuantity] = useState('1')
 const dispatch = useDispatch()
-
 
 const onAddToCartHandler = () => { 
 dispatch(addToCart({
@@ -35,6 +33,7 @@ setIsModalOpen(true)
   setIsModalOpen(false)
  }
 
+
   return (
     <>
   {isModalOpen && <ProductModal name={data.title} price={data.price} quantity={+quantity} totalPrice={+data.price * +quantity} img={data.img} closeModal={closeModalHandler} />}
@@ -50,7 +49,7 @@ setIsModalOpen(true)
       </section>
       <section className={styles.buy}>
         <h2 className={styles['buy__h2']}>{data.title}</h2>
-        <span className={styles['buy__price']}>{data.price.toString().replace('.', ',')}</span>
+        <span className={styles['buy__price']}>{data.price.toFixed(2).toString().replace('.', ',')}</span>
         <img
           src={
             'https://a.allegroimg.com/original/343b4d/ed3f5c04412ab7bd70dd0a34f0cd/brand-subbrand-smart-d8bfa93f10.svg'
@@ -58,7 +57,7 @@ setIsModalOpen(true)
           alt='smart icon'
         />
         <div className={styles['buy__btns-box']}>
-          <QuantityInput value={quantity} min='1' max='10' setValue={setQuantity} />
+          <QuantityInput value={quantity} min='1' max={data.quantity} setValue={setQuantity} />
           <div className={styles['buy__counter-box']}></div>
           <Button text='dodaj do koszyka' onClick={onAddToCartHandler} />
           <Button text='kup i zapłać' />

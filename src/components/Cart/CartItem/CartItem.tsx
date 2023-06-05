@@ -27,7 +27,7 @@ const deleteFromCartHandler = () => {
 		<li className={styles.product}>
 			<img src={item.img} alt={item.name} className={styles['product__img']} />
 			<span>{item.name}</span>
-			<span>{item.price}</span>
+			<span>{item.price.toFixed(2).toString().replace('.', ',')}</span>
 			<button className={styles['product__bin-btn']}><i className={styles['product__bin']} onClick={deleteFromCartHandler}></i></button>
 			<QuantityInput value={quantity} min='1' max='10' setValue={setQuantity}/>
 		</li>

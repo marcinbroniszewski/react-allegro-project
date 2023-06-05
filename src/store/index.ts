@@ -3,11 +3,13 @@ import cartReducer from "./cart-slice";
 import { persistStore } from "redux-persist";
 import authReducer from "./auth-slice";
 import thunk from 'redux-thunk'
+import categoryReducer from "./category-slice";
 
 const store = configureStore({
     reducer: {
         cart: cartReducer,
-        auth: authReducer
+        auth: authReducer,
+        category: categoryReducer
     },
     middleware: [thunk]
 })

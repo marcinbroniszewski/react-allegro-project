@@ -95,7 +95,8 @@ overflow-wrap: break-word;
 &__price-box {
 	display: flex;
 	flex-direction: column;
-	justify-self: flex-end;
+	align-items: flex-end;
+	margin-left: auto;
 }
 		&__item-total {
 			font-size: 2.5rem;
