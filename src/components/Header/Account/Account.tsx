@@ -20,13 +20,13 @@ export default function Account() {
 	const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 })
 	const isDesktop = useMediaQuery({ minWidth: 1024 })
 
-	const mobileTabletStructure = <img src={userIcon} alt='ikona użytkownika' />
+	const mobileTabletStructure = <img src={userIcon} alt='ikona użytkownika' className={styles['user-icon']} />
 
 
 const chevronClasses = !isClicked ? styles['acc__chevron'] : `${styles['acc__chevron']} ${styles['acc__chevron-clicked']}`
 const smartClasses = !user ? styles['acc__smart-text'] : `${styles['acc__smart-text']} ${styles['acc__smart-user']}`
 	const desktopStructure = (
-		<div>
+		<div className={styles['acc__user-box']}>
 			<span className={smartClasses}>
 				{user? 'jesteś' : 'bądź'} <img src={smartIcon} alt='smart icon' className={styles['acc__smart-icon']} />
 			</span>

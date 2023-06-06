@@ -19,6 +19,9 @@ const authSlice = createSlice({
   reducers: {
     setUser: (state, action: PayloadAction<AuthStateInterface['user']>) => {
       state.user = action.payload
+    },
+    logout: (state, action: PayloadAction<AuthStateInterface['user']>) => {
+state.user = action.payload
     }
   },
 });
@@ -32,4 +35,4 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, authSlice.reducer);
 
 export default persistedReducer;
-export const {setUser} = authSlice.actions;
+export const {setUser, logout} = authSlice.actions;

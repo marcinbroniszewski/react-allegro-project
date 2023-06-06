@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .nav {
     position: relative;
     margin-bottom: 2rem;
@@ -33,12 +35,12 @@ padding-left: 3.6rem;
         line-height: 4.8rem;
         font-size: 1.4rem;
         text-decoration: none;
-        color: rgb(0, 134, 115);
-        transition: 0.3s;
+        color: $green-link;
+        transition: 0.2s color;
     }
 
     a:hover {
-color: rgb(15, 207, 182);
+color: $hover-green-link;
     }
 
     svg {

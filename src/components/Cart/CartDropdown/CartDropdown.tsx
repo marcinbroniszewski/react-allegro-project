@@ -15,7 +15,6 @@ export default function CartDropdown(props: Props) {
 	const totalPrice = useSelector((state: { cart: CartState }) => state.cart.totalPrice)
 	const cartItems = useSelector((state: { cart: CartState }) => state.cart.items)
 
-
 	return (
 		<div className={styles.dropdown} onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave}>
 			<div className={styles.header}>
@@ -38,18 +37,20 @@ export default function CartDropdown(props: Props) {
 				{totalPrice > 0 && (
 					<>
 						<ul className={styles['main__list-items']}>
-							{cartItems.map(item => (
-								<li key={item.id} className={styles['main__item-container']}>
+							{cartItems.map(item => 
+{
+							const totalPrice = item.quantity * item.price
+								return <li key={item.id} className={styles['main__item-container']}>
 									<img src={item.img} alt={item.name} className={styles['main__item-img']} />
 									<span className={styles['main__item-name']}>
 										{item.quantity} x {item.name}
 									</span>
 									<div className={styles['main__price-box']}>
-										<span className={styles['main__item-total']}>{item.quantity * item.price} zł</span>
-										<span className={styles['main__item-price']}>za sztukę {item.price}</span>
+										<span className={styles['main__item-total']}>{totalPrice.toFixed(2).toString().replace('.', ',')} zł</span>
+										<span className={styles['main__item-price']}>za sztukę {item.price.toFixed(2).toString().replace('.', ',')}</span>
 									</div>
-								</li>
-							))}
+								</li>}
+							)}
 						</ul>
 					</>
 				)}
