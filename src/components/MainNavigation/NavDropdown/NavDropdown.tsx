@@ -1,5 +1,5 @@
 import styles from './NavDropdown.module.scss'
-import { useLoaderData, Link} from 'react-router-dom'
+import { useLoaderData, Link } from 'react-router-dom'
 import { useState } from 'react'
 
 interface Props {
@@ -7,17 +7,13 @@ interface Props {
 }
 
 export default function NavDropdown(props: Props) {
-	const [selectedCategory, setSelectedCategory] = useState('elektronika')
+	const [selectedCategory, setSelectedCategory] = useState('moda')
 
 	const data: any = useLoaderData()
-	const subcategory = Object.keys(data[selectedCategory])[0]
-
 
 	const handleSelectedCategory = (category: any) => {
 		setSelectedCategory(category)
 	}
-
-
 
 	return (
 		<div className={styles.dropdown}>
@@ -33,18 +29,28 @@ export default function NavDropdown(props: Props) {
 				</ul>
 			</div>
 			<div className={styles['dropdown__subcategories']}>
-				<h3>{subcategory.replace(/-/g, ' ')}</h3>
-				<ul>
-					{Object.keys(data[selectedCategory][subcategory]).map(subcategory2 => {
-						return (
-							<li key={subcategory2}>
-								<Link to={`${selectedCategory}/${subcategory}/${subcategory2}`} onClick={props.closeDropdown}>
-									{subcategory2.replace(/-/g, ' ')}
-								</Link>
-							</li>
-						)
-					})}
-				</ul>
+				{Object.keys(data[selectedCategory]).map(subcategory => {
+					return (
+						<div key={subcategory}>
+							<h3>{subcategory.replace(/-/g, ' ')}</h3>
+							<ul>
+								{Object.keys(data[selectedCategory][subcategory]).map(subcategory2 => {
+
+									return (
+										<li key={subcategory2}>
+											<Link
+												to={`${selectedCategory}/${subcategory}/${subcategory2}`}
+												onClick={props.closeDropdown}>
+												{subcategory2.replace(/-/g, ' ')}
+											</Link>
+										</li>
+									)
+								})}
+							</ul>
+						</div>
+					)
+				})}
+				<ul></ul>
 			</div>
 		</div>
 	)

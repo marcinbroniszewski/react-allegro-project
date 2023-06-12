@@ -8,6 +8,7 @@ import CategoryPage, {loader as categoryLoader} from './pages/Category';
 import ProductPage, {loader as productLoader} from './pages/Product';
 import CartPage from './pages/Cart';
 import SalePage from './pages/Sale';
+import SearchPage from './pages/Search';
 
 const categoriesLoader = async () => { 
   const response = await fetch('https://allegro-642ad-default-rtdb.europe-west1.firebasedatabase.app/categories.json')
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
     {path: 'rejestracja', element: <RegistrationPage />},
     {path: 'logowanie', element: <LoginPage />},
     {path: 'koszyk', element: <CartPage />},
+    {path: 'wyszukaj/:searchValue', element: <SearchPage />, loader: categoriesLoader},
     {path: 'wystaw', element: <SalePage />, loader: categoriesLoader},
     {path: ':categoryId', element: <CategoryPage />, loader: categoryLoader},
     {path: ':categoryId/:subcategoryId', element: <CategoryPage />},

@@ -33,7 +33,6 @@ setIsModalOpen(true)
   setIsModalOpen(false)
  }
 
-
   return (
     <>
   {isModalOpen && <ProductModal name={data.title} price={data.price} quantity={+quantity} totalPrice={+data.price * +quantity} img={data.img} closeModal={closeModalHandler} />}
