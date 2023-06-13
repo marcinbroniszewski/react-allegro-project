@@ -1,4 +1,23 @@
+@import '../../../variables';
+
 .container {
+    a {
+        text-decoration: none;
+    }
+    a &__product-title {
+        transition: .2s color;
+        
+    }
+
+    a:hover &__product-title {
+        color: $hover-green-link;
+    }
+
+
+&__product-title {
+    font-size: 1.3rem;
+color: $main-dark-font;
+}
 
     &__product-img {
         height: 160px;

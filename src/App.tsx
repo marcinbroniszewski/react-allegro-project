@@ -20,7 +20,7 @@ const categoriesLoader = async () => {
 
 const router = createBrowserRouter([
   {path: '/', element: <RootLayout />, errorElement: <ErrorPage />, loader: categoriesLoader, children: [
-    {index: true, element: <HomePage />},
+    {index: true, element: <HomePage />, loader: categoriesLoader},
     {path: 'rejestracja', element: <RegistrationPage />},
     {path: 'logowanie', element: <LoginPage />},
     {path: 'koszyk', element: <CartPage />},

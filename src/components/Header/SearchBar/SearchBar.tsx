@@ -7,6 +7,7 @@ import { useLoaderData } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setMatchingObjects } from '../../../store/search-slice'
+import { createMatchingObjects } from '../../../store/search-slice'
 
 export default function SearchBar() {
 	const isMobile = useMediaQuery({ maxWidth: 767 })
@@ -60,31 +61,6 @@ export default function SearchBar() {
 	)
 }
 
-interface Product {
-	title: string
-}
 
-function createMatchingObjects(data: any, searchValue: string, selectValue: string): Product[] {
-	const matchingObjects: Product[] = []
 
-	const searchInData = (data: any) => {
-		if (typeof data === 'object' && data !== null) {
-			for (const key in data) {
-				const value = data[key]
 
-				if (key === 'title' && typeof value === 'string' && value.toLowerCase().includes(searchValue.toLowerCase())) {
-					matchingObjects.push(data as Product)
-				} else {
-					searchInData(value)
-				}
-			}
-		}
-	}
-	if (selectValue === 'all-categories') {
-    searchInData(data)
-  } else if (data.hasOwnProperty(selectValue)) {
-searchInData(data[selectValue])
-  }
-
-	return matchingObjects
-}

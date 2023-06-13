@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react'
+import React, { ReactNode } from 'react'
 import styles from './ProductsCarousel.module.scss'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -28,26 +28,69 @@ function PrevArrow(props: any) {
 interface Props {
 	settings: {
 		[key: string]: number | boolean
-	};
-	children: ReactNode;
+	}
+	children: ReactNode
 }
 
-
-const ProductsCarousel = ({settings, children}: Props) => {
-	
+const ProductsCarousel = ({ settings, children }: Props) => {
 	const object = {
 		...settings,
-		nextArrow: <NextArrow />, prevArrow: <PrevArrow />
+		nextArrow: <NextArrow />,
+		prevArrow: <PrevArrow />,
 	}
-	
 
-  return (
-    <div className={styles['products-carousel']}>
-		<Slider {...object}>
-				{children}
-			</Slider>
-	</div>
-  )
+	return (
+		<div className={styles['products-carousel']}>
+			<Slider {...object}>{children}</Slider>
+		</div>
+	)
 }
 
 export default ProductsCarousel
+
+interface Category {
+	id: string
+	name: string
+	price: number
+	quantity: number
+	img: string
+	link: string
+}
+
+export const findCategory = (data: any, category: string) => {
+    const matchingCategory: Category[] = [];
+
+    const searchCategoryInData = (data: any, categoryPath: string[] = []) => {
+        if (typeof data === 'object' && data !== null) {
+            for (const key in data) {
+                if (data.hasOwnProperty(category)) {
+                    const categoryObjects: Category[] = Object.values(data[category]);
+                    const linkSuffixes: string[] = Object.keys(data[category]);
+
+                    for (let i = 0; i < categoryObjects.length; i++) {
+                        const obj: Category = categoryObjects[i];
+                        const linkSuffix: string = linkSuffixes[i];
+                        const link: string = `/${categoryPath.join('/')}/${category}/${linkSuffix}`;
+
+                        const categoryItem: Category = {
+                            id: obj.id,
+                            name: obj.name,
+                            price: obj.price,
+                            quantity: obj.quantity,
+                            img: obj.img,
+                            link: link,
+                        };
+
+                        matchingCategory.push(categoryItem);
+                    }
+                } else {
+                    searchCategoryInData(data[key], [...categoryPath, key]);
+                }
+            }
+        }
+    };
+
+    searchCategoryInData(data);
+    console.log(matchingCategory);
+    return matchingCategory;
+};

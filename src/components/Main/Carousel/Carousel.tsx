@@ -40,7 +40,8 @@ const settings = {
 
 
 function NextArrow(props: any) {
-	const { onClick } = props
+const { onClick } = props
+
 	return (
 		<div className={styles['next-arrow']} onClick={onClick}>
 			<FontAwesomeIcon icon={faChevronRight} className={styles['chevron-right']} />
