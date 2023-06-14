@@ -48,8 +48,8 @@ export default function MainNavigation() {
 							</NavLink>
 						</div>
 					</div>
-				</div>
 				{isActive && <NavDropdown closeDropdown={dropdownHandler} />}
+				</div>
 			</div>
 		</>
 	)

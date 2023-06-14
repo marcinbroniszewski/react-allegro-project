@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom'
 export default function SearchResults() {
 	const matchingProducts = useSelector((state: RootState) => state.search.matchingObjects)
 
-  console.log(matchingProducts);
-
 	return (
 		<div>
 			{matchingProducts && matchingProducts.length > 0 ? (

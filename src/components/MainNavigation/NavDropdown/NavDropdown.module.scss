@@ -1,7 +1,9 @@
+@import '../../../variables';
+
 .dropdown {
 	position: absolute;
 	top: 50px;
-	width: 100%;
+	min-width: 100%;
 	display: flex;
 	background-color: #fff;
 	z-index: 99;
@@ -16,16 +18,66 @@
 		font-size: 1.4rem;
 	}
 
-    a {
-        color: black;
+    &__subsubcategory a {
+        color: $main-dark-font;
+		font-size: 1.2rem;
     }
 
 	&__categories,
 	&__subcategories {
-		margin: 1rem;
+		margin: 1rem 0;
 	}
 
 	&__subcategories {
 		display: flex;
+		justify-content: space-between;
+	}
+	
+
+	&__category {
+		margin-bottom: 1rem;
+		padding: 0 1rem;
+		color: $main-dark-font;
+		cursor: default;
+	}
+
+	&__selected-category {
+		color: $hover-green-link;
+		border-left: 2px solid $hover-green-link;
+	}
+
+	&__subcategory, &__subsubcategory {
+		margin-right: 8px;
+		color: $main-dark-font;
+	}
+
+	&__subcategory {
+		font-size: 1.4rem;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.dropdown {
+		padding: 8px 0 4px;
+
+		&__category {
+			padding-left: 2.5rem;
+		}
+
+		&__subcategories {
+			margin-left: 2rem;
+			padding: 0 16px;
+		}
+
+		&__subcategory, &__subsubcategory {
+			margin: 0 5px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.dropdown {
+		min-width: 65%;
 	}
 }

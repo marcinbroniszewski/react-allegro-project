@@ -50,7 +50,7 @@ export default ProductsCarousel
 
 interface Category {
 	id: string
-	name: string
+	title: string
 	price: number
 	quantity: number
 	img: string
@@ -74,7 +74,7 @@ export const findCategory = (data: any, category: string) => {
 
                         const categoryItem: Category = {
                             id: obj.id,
-                            name: obj.name,
+                            title: obj.title,
                             price: obj.price,
                             quantity: obj.quantity,
                             img: obj.img,
@@ -91,6 +91,5 @@ export const findCategory = (data: any, category: string) => {
     };
 
     searchCategoryInData(data);
-    console.log(matchingCategory);
     return matchingCategory;
 };

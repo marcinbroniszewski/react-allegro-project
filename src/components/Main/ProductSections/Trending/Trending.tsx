@@ -41,7 +41,7 @@ const data: any = useLoaderData()
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 4,
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplay: false,
 	}
@@ -69,7 +69,7 @@ if(isMobile) {
 										<img src={item.img} alt='' className={styles['container__product-img']} />
 										<p className={styles['container__product-price']}>{item.price.toFixed(2).replace('.', ',')} zł</p>
 										<img src={smartIcon} alt='ikona smart allegro' />
-										<p className={styles['container__product-title']}>Somat Gold Zestaw do Zmywareki 4 Elementy</p>
+										<p className={styles['container__product-title']}>{item.title}</p>
 									</div>
 									</Link>
 								)
