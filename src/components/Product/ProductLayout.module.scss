@@ -1,6 +1,11 @@
 @import '../../variables';
 
+.product-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 .product {
+
 	&__header,
 	&__description {
 		margin-bottom: 2rem;
@@ -72,6 +77,47 @@
 
 	&__btns-box button {
 		margin-bottom: 1rem;
+	}
+	&__quantity-text, &__quantity-number {
+
+		font-size: 1.3rem;
+		color: #656565;
+	}
+
+	&__quantity-text {
+		margin-bottom: 0.2rem;	
+	}
+
+	&__quantity-number {
+		margin-left: 1rem;
+	}
+
+	&__quantity-input-box {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+	&__hr {
+		margin-bottom: 2rem;
+		border: 1px solid #e7e7e7;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.product {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: 20px;
+
+		&__header, &__description  {
+			padding: 24px;
+		}
+	}
+
+	.buy {
+		padding: 24px;
+	height: 360px;
 	}
 
 }
