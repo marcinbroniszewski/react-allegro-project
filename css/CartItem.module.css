@@ -1,0 +1,89 @@
+.product {
+  padding: 16px;
+  margin-bottom: 2rem;
+  background-color: #fff;
+}
+.product__box {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.product__img-box {
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.product__img {
+  margin-right: 1rem;
+  height: 96px;
+  width: 96px;
+}
+.product__name {
+  margin: 0 2rem;
+  font-size: 1.4rem;
+  color: rgb(46, 46, 46);
+}
+.product__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.product__price {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: rgb(58, 78, 88);
+}
+.product__bin {
+  display: inline-block;
+  padding: 4px;
+  height: 32px;
+  width: 32px;
+  background-image: url("https://assets.allegrostatic.com/metrum/icon/trash-bin-b5de8ba85e.svg");
+}
+.product__bin-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.product__hr {
+  margin: 2rem 0;
+  border: 1px solid #e7e7e7;
+}
+.product__smart-text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: right;
+  color: rgb(46, 46, 46);
+}
+.product__smart-text-span {
+  color: #1bb826;
+}
+.product__smart-icon {
+  height: 12px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .product__price {
+    font-size: 2.5rem;
+  }
+  .product__smart-text {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+}/*# sourceMappingURL=CartItem.module.css.map */

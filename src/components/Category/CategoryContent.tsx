@@ -22,7 +22,7 @@ export default function CategoryContent() {
 				<ul>
 					{Object.keys(data).map(product => {
 						return (
-							<li key={data[product].id}>
+							<li key={data[product].id} className={styles['category__li']}>
 								<Link to={product}>
 									<div className={styles['category__product']}>
 										<div className={styles['category__product-img']}>

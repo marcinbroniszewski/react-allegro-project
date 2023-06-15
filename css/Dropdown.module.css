@@ -1,0 +1,197 @@
+.dropdown {
+  position: absolute;
+  right: -32px;
+  width: 286px;
+  margin-top: 0.5rem;
+  background-color: rgb(236, 239, 241);
+  border: 0.5px solid rgb(117, 117, 117);
+  z-index: 999;
+  text-align: center;
+}
+.dropdown__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.6rem;
+  background-color: #fff;
+}
+.dropdown__img {
+  height: 183px;
+  width: 254px;
+}
+.dropdown__header {
+  margin-bottom: 8px;
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+.dropdown__small-text {
+  margin-bottom: 1.5rem;
+  color: rgb(118, 118, 118);
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+}
+.dropdown__reg-text {
+  margin-top: 1.7rem;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: rgb(34, 34, 34);
+}
+.dropdown__reg-link {
+  text-decoration: none;
+  color: rgb(0, 167, 144);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.dropdown__reg-link:hover {
+  color: rgb(33, 211, 107);
+}
+.dropdown__login-link, .dropdown__reg-link {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.user-menu {
+  position: relative;
+  height: 453px;
+}
+.user-menu__btns-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.5rem 0;
+  height: 40px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  background-color: #fff;
+}
+.user-menu__btn {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: rgb(46, 46, 46);
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+  cursor: pointer;
+}
+.user-menu__btn:not(.active):hover {
+  color: rgb(12, 189, 150);
+}
+.user-menu__btn:hover {
+  color: rgb(255, 90, 0);
+}
+.user-menu__btn span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 21px;
+  line-height: 21px;
+}
+.user-menu__content {
+  background-color: #fff;
+}
+.user-menu__h6 {
+  padding: 8px 16px;
+  font-size: 1.4rem;
+  text-align: left;
+  color: rgb(46, 46, 46);
+}
+.user-menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.user-menu__link-text {
+  height: 31px;
+  line-height: 31px;
+  text-align: left;
+  color: rgb(46, 46, 46);
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.user-menu__link-text:hover {
+  color: rgb(12, 189, 150);
+}
+.user-menu__account-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
+}
+.user-menu__account-text-box {
+  text-align: left;
+}
+.user-menu__h5 {
+  margin-bottom: 0.3rem;
+  font-size: 1.6rem;
+  color: rgb(46, 46, 46);
+}
+.user-menu__account-details {
+  height: 21px;
+  line-height: 21px;
+  color: #656565;
+}
+.user-menu__account-icon-box img {
+  height: 54px;
+  width: 54px;
+}
+.user-menu__account-logout-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  font-size: 1.4rem;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #059c86;
+  background-color: #fff;
+  border: none;
+  border-top: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+  cursor: pointer;
+}
+.user-menu__account-logout-btn:hover {
+  color: rgb(12, 189, 150);
+}
+
+.active {
+  position: relative;
+  color: rgb(255, 90, 0);
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 90, 0);
+}
+
+@media (min-width: 350px) {
+  .dropdown {
+    right: -50px;
+  }
+}
+@media (min-width: 420px) {
+  .dropdown {
+    right: -75px;
+  }
+}/*# sourceMappingURL=Dropdown.module.css.map */

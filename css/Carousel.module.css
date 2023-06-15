@@ -1,0 +1,55 @@
+.carousel {
+  -webkit-transition: visibility 0.3s;
+  transition: visibility 0.3s;
+  background-color: #fff;
+  margin-bottom: 3.2rem;
+}
+
+ul {
+  background-color: #fff;
+}
+
+.next-arrow,
+.prev-arrow {
+  visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .carousel {
+    -webkit-transition: visibility 0.3s;
+    transition: visibility 0.3s;
+  }
+  .next-arrow,
+  .prev-arrow {
+    position: absolute;
+    top: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 1rem;
+    width: 4rem;
+    height: 4rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: rgba(247, 247, 247, 0.9);
+    cursor: pointer;
+    z-index: 999;
+  }
+  .next-arrow {
+    right: 0;
+  }
+  .chevron-left,
+  .chevron-right {
+    color: #b4b4b4;
+    font-size: 3rem;
+  }
+  .carousel:hover .next-arrow, .carousel:hover .prev-arrow {
+    visibility: visible;
+  }
+}/*# sourceMappingURL=Carousel.module.css.map */

@@ -1,0 +1,268 @@
+.h3 {
+  margin: 0.8rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+}
+
+.box {
+  margin-bottom: 32px;
+  max-width: 42.4rem;
+}
+
+.form-container, .summary-container {
+  height: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form {
+  margin: 0 auto 2rem;
+  max-width: 46rem;
+  padding: 4px 8px;
+  background-color: #fff;
+  color: rgb(46, 46, 46);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+}
+.form__title-length {
+  margin-top: 5px;
+  text-align: right;
+  font-size: 1.3rem;
+  color: #767676;
+}
+.form__drop-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 15rem;
+  background-image: url("https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/029405be/assets/camera.5577f27d.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 8rem 6.7rem;
+}
+.form__product-img {
+  margin-bottom: 2rem;
+  height: 300px;
+  width: 300px;
+}
+.form__form-control {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.form__form-control::-webkit-outer-spin-button, .form__form-control::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__form-control {
+  padding: 1.2rem 1.6rem;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.6rem;
+  border: 1px solid #e7e7e7;
+  border-radius: 0.8rem;
+  color: #000;
+}
+.form__form-control::-webkit-input-placeholder {
+  color: #b8b8b8;
+}
+.form__form-control::-moz-placeholder {
+  color: #b8b8b8;
+}
+.form__form-control:-ms-input-placeholder {
+  color: #b8b8b8;
+}
+.form__form-control::-ms-input-placeholder {
+  color: #b8b8b8;
+}
+.form__form-control::placeholder {
+  color: #b8b8b8;
+}
+.form__category-button {
+  padding: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: #2bb9a3;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.form__selected-categories {
+  margin: 1.6rem 0;
+  padding: 1.6rem 3.6rem 1.6rem 1.6rem;
+  border: 1px solid #f7ae10;
+  border-radius: 8px;
+  background-image: url("https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/7226df8e/assets/check_mark_orange.95c28ce6.svg");
+  background-repeat: no-repeat;
+  background-position: top 2rem right 2rem;
+}
+.form__selected-category, .form__selected-subcategory, .form__selected-sub-subcategory {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: rgb(72, 72, 72);
+}
+.form__selected-category::after, .form__selected-subcategory::after {
+  content: ">";
+  margin: 0 3px;
+  font-size: 1rem;
+}
+.form__selected-category::first-letter, .form__selected-subcategory::first-letter, .form__selected-sub-subcategory::first-letter {
+  text-transform: capitalize;
+}
+.form__price-input-box {
+  position: relative;
+}
+.form__currency {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+}
+.form__quantity-label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.form__quantity-input {
+  width: 11.2rem;
+  color: rgb(46, 46, 46);
+}
+.form__quantity-error {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(226, 20, 0);
+}
+
+.summary-container {
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.summary {
+  padding: 0.8rem 0 1.6rem;
+  margin: 0 auto;
+  max-width: 46rem;
+  color: rgb(46, 46, 46);
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+}
+.summary__header {
+  padding: 0.8rem 2rem 0.5rem;
+  background-repeat: no-repeat;
+  background-image: url("https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/029405be/assets/offer_type_buy_now.158ddd04.svg");
+  background-size: 48px 40.5px;
+  background-position: center right 2rem;
+}
+.summary__title {
+  font-family: sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #ff5a00;
+}
+.summary__benefits-list {
+  margin-left: 2rem;
+  padding: 1.6rem 3.2rem;
+  list-style-image: url("./checkmark.svg");
+  font-size: 1.4rem;
+  border-bottom: 1px solid #ebe9e9;
+}
+.summary__benefit {
+  margin-bottom: 0.8rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+.summary__error-hint {
+  padding: 1rem 3rem 1rem 6rem;
+  margin: 1.6rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(255, 114, 102);
+  background-image: url("https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/7226df8e/assets/offer-form-validation-error-icon.9aafa049.svg");
+  background-repeat: no-repeat;
+  background-position: 3.2rem;
+}
+.summary__offer-submit {
+  padding: 1.6rem 2rem;
+}
+.summary__submit-btn {
+  padding: 0 2.4rem;
+  height: 4.8rem;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px;
+  color: #fff;
+  background-color: rgb(255, 90, 0);
+  border: none;
+  cursor: pointer;
+}
+.summary__submit-btn:disabled {
+  background-color: rgb(195, 195, 195);
+  color: #ffffff;
+}
+
+@media (min-width: 960px) {
+  .sale {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .form-container, .summary-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .form, .summary {
+    padding: 1rem 3.2rem;
+    border-radius: 0.8rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+  }
+  .summary-container {
+    position: sticky;
+    top: 116px;
+  }
+}
+@media (min-width: 1200px) {
+  .form {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 1300px) {
+  .form {
+    max-width: 55rem;
+    width: 55rem;
+  }
+}
+@media (min-width: 1600px) {
+  .sale {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .summary {
+    width: 90%;
+  }
+}/*# sourceMappingURL=SaleLayout.module.css.map */

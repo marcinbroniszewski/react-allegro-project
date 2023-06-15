@@ -1,16 +1,18 @@
 import styles from './CartLayout.module.scss'
 import CartItem from '../CartItem/CartItem'
-import { CartItemInterface } from '../../../store/cart-slice'
+import { CartItemInterface, clearCart } from '../../../store/cart-slice'
 import { useSelector } from 'react-redux'
 import Button from '../../UI/Button'
 import { AuthStateInterface } from '../../../store/auth-slice'
 import { useNavigate } from 'react-router-dom'
 import CartEmpty from '../CartEmpty/CartEmpty'
+import { useDispatch } from 'react-redux'
 
 interface CartState {
 	items: CartItemInterface[]
 }
 export default function CartLayout() {
+	const dispatch = useDispatch()
 	const user = useSelector((state: { auth: AuthStateInterface }) => state.auth.user)
 	const cart = useSelector((state: { cart: CartState }) => state.cart.items)
 	const arrayOfPrices = cart.map(item => item.quantity * item.price)
@@ -20,10 +22,14 @@ export default function CartLayout() {
 		.replace('.', ',')
 	const navigate = useNavigate()
 
-	const handlePaymentClick = () => {
+	const handlePaymentClick = async () => {
 		if (!user) {
 			navigate('/logowanie')
+			return 
 		}
+		navigate('/')
+		alert('Zamówienie zostało zrealizowane :)')
+		dispatch(clearCart())
 	}
 
 	return (

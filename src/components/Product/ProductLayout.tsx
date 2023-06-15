@@ -79,7 +79,7 @@ export default function ProductLayout() {
                               <p className={styles['buy__quantity-number']}>z {data.quantity} sztuk</p>
               </div>
 							<Button text='dodaj do koszyka' onClick={onAddToCartHandler} />
-							<Button text='kup i zapłać' />
+							<Button text='kup i zapłać' onClick={onAddToCartHandler} />
 						</div>
 					</section>
 				</div>

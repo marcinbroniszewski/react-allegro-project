@@ -1,0 +1,118 @@
+.product-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product__header, .product__description {
+  margin-bottom: 2rem;
+  background-color: #fff;
+}
+.product__header {
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.product__h1 {
+  padding-bottom: 25px;
+  font-size: 2.1rem;
+  font-family: "Roboto", sans-serif;
+}
+.product__img {
+  width: 90%;
+}
+.product__description {
+  padding: 16px;
+}
+.product__text {
+  margin-bottom: 16px;
+  font-size: 21px;
+  font-weight: 500;
+}
+.product__h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+.product__description-text {
+  font-size: 1.6rem;
+}
+
+.buy {
+  padding: 18px;
+  background-color: #fff;
+}
+.buy button[disabled] {
+  -webkit-filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(84%) contrast(83%);
+          filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(84%) contrast(83%);
+}
+.buy__h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.buy__price {
+  margin-right: 1rem;
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: rgb(58, 78, 88);
+}
+.buy__btns-box {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.buy__btns-box button {
+  margin-bottom: 1rem;
+}
+.buy__quantity-text, .buy__quantity-number {
+  font-size: 1.3rem;
+  color: #656565;
+}
+.buy__quantity-text {
+  margin-bottom: 0.2rem;
+}
+.buy__quantity-number {
+  margin-left: 1rem;
+}
+.buy__quantity-input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+.buy__hr {
+  margin-bottom: 2rem;
+  border: 1px solid #e7e7e7;
+}
+
+@media (min-width: 768px) {
+  .product {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+  }
+  .product__header, .product__description {
+    padding: 24px;
+  }
+  .buy {
+    padding: 24px;
+    height: 360px;
+  }
+}/*# sourceMappingURL=ProductLayout.module.css.map */

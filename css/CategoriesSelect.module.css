@@ -1,0 +1,108 @@
+.category-select, .subcategory-select, .sub-subcategory-select {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6.5rem;
+  -webkit-box-shadow: rgba(117, 117, 117, 0.1) 0px 2px 6px 0px;
+          box-shadow: rgba(117, 117, 117, 0.1) 0px 2px 6px 0px;
+}
+.header__h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+}
+.header__h2::first-letter {
+  text-transform: capitalize;
+}
+.header__prev-btn {
+  cursor: pointer;
+}
+.header__arrow {
+  padding: 1rem;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 5%;
+  color: rgb(46, 46, 46);
+}
+
+.categories__category {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f7f7f7;
+  background-image: url("https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/c7650ae8/assets/right.252613e3.svg");
+  background-repeat: no-repeat;
+  background-position: right 6% center;
+}
+.categories__subcategory, .categories__sub-subcategory {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f7f7f7;
+}
+.categories__category, .categories__subcategory, .categories__sub-subcategory {
+  list-style: none;
+}
+.categories__category-btn, .categories__subcategory-btn, .categories__sub-subcategory-btn {
+  height: 40px;
+  width: 100%;
+  padding-left: 3rem;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.categories__category-btn::first-letter, .categories__subcategory-btn::first-letter, .categories__sub-subcategory-btn::first-letter {
+  text-transform: capitalize;
+}
+.categories__subcategory-btn, .categories__sub-subcategory-btn {
+  font-size: 1.4rem;
+}
+
+.stepback {
+  padding: 12px 24px;
+  border-bottom: 1px solid #f7f7f7;
+  background-image: url("https://lokalnie-prod-assets.storage.googleapis.com/ui/versions/8fa95fac/assets/left-green.2434d136.svg");
+  background-repeat: no-repeat;
+  background-position: left 3rem center;
+}
+.stepback__button {
+  height: 40px;
+  width: 100%;
+  padding-left: 3rem;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  text-align: left;
+  color: #2bb9a3;
+  cursor: pointer;
+}
+
+@media (min-width: 960px) {
+  .category-select, .subcategory-select, .sub-subcategory-select {
+    position: static;
+    margin-top: 1rem;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 8px;
+  }
+}/*# sourceMappingURL=CategoriesSelect.module.css.map */

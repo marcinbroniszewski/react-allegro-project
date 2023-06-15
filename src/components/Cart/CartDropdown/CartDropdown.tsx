@@ -25,7 +25,7 @@ export default function CartDropdown(props: Props) {
 				</div>
 			</div>
 			<div className={styles.main}>
-				{totalPrice === 0 && (
+				{cartItems.length === 0 && (
 					<div className={styles['main__content-box']}>
 						<h4 className={styles['main__h4']}>Twój koszyk jest pusty</h4>
 						<p className={styles['main__p']}>Dodaj do koszyka przedmioty i kup je szybko i wygodnie</p>
@@ -34,7 +34,7 @@ export default function CartDropdown(props: Props) {
 						</p>
 					</div>
 				)}
-				{totalPrice > 0 && (
+				{cartItems.length > 0 && (
 					<>
 						<ul className={styles['main__list-items']}>
 							{cartItems.map(item => 
@@ -55,7 +55,7 @@ export default function CartDropdown(props: Props) {
 					</>
 				)}
 			</div>
-			{totalPrice && (
+			{cartItems.length > 0 && (
 				<div className={styles['btn-box']}>
                     <Link to='koszyk' className={styles['cart-link']}>pokaż koszyk</Link>
 					<Link to='koszyk'><Button text='do kasy' /></Link>

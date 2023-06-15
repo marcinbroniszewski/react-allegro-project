@@ -1,0 +1,46 @@
+.nav {
+  position: relative;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.nav .active {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+.nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__btn {
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  height: 4.8rem;
+  font-size: 1.4rem;
+  color: rgb(34, 34, 34);
+  background: none;
+  border: 1px solid #ddd;
+  border-bottom-style: none;
+  border-top-style: none;
+  cursor: pointer;
+}
+.nav__links-box {
+  padding-left: 3.6rem;
+}
+.nav a {
+  padding-right: 1.4rem;
+  line-height: 4.8rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #059c86;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+}
+.nav a:hover {
+  color: rgb(12, 189, 150);
+}
+.nav svg {
+  margin-left: 1.5rem;
+  color: #8f8f8f;
+}/*# sourceMappingURL=MainNavigation.module.css.map */

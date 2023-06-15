@@ -1,0 +1,24 @@
+.container a {
+  text-decoration: none;
+}
+a .container__product-title {
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+}
+a:hover .container__product-title {
+  color: rgb(12, 189, 150);
+}
+.container__product-title {
+  width: 80%;
+  font-size: 1.3rem;
+  color: rgb(46, 46, 46);
+}
+.container__product-img {
+  height: 160px;
+  width: 160px;
+}
+.container__product-price {
+  font-size: 27px;
+  font-weight: 500;
+  color: rgb(58, 78, 88);
+}/*# sourceMappingURL=card-sections-styles.module.css.map */

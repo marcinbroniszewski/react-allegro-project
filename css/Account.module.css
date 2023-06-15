@@ -1,0 +1,40 @@
+.user-icon {
+  cursor: pointer;
+}
+
+.acc {
+  position: relative;
+  display: inline-block;
+  margin-left: 2rem;
+  font-size: 1.4rem;
+}
+.acc__user-box {
+  cursor: pointer;
+}
+.acc__smart-text {
+  position: relative;
+  font-size: 1.3rem;
+  color: rgb(101, 101, 101);
+}
+.acc__smart-user {
+  color: rgb(255, 90, 0);
+}
+.acc__allegro-text {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.acc__smart-icon {
+  position: absolute;
+  bottom: 0;
+  padding-left: 4px;
+}
+.acc__chevron {
+  margin-left: 0.7rem;
+  width: 1.5rem;
+}
+.acc__chevron-clicked {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}/*# sourceMappingURL=Account.module.css.map */

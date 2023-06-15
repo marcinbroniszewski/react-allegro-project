@@ -1,0 +1,102 @@
+.footer__upper-container {
+  background-color: rgb(58, 78, 88);
+}
+.footer__upper-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.4rem;
+}
+.footer__terms {
+  margin-right: 1.6rem;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.footer__logo {
+  height: 2.7rem;
+}
+.footer__terms-link {
+  text-decoration: none;
+  color: rgb(72, 207, 128);
+}
+.footer__lower {
+  padding: 2rem;
+}
+.footer__services-text {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  color: #656565;
+}
+.footer__services-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer__service-logo {
+  height: 40px;
+  min-width: 140px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .footer__services-logos {
+    gap: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+  }
+  .footer__upper {
+    margin: 0 auto;
+  }
+  .footer__logo {
+    height: 4.3rem;
+  }
+  .footer__terms {
+    font-size: 1.5rem;
+  }
+  .footer__lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2.4rem;
+  }
+  .footer__services-text {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .footer__service-logo {
+    -webkit-transition: -webkit-filter 0.3s;
+    transition: -webkit-filter 0.3s;
+    transition: filter 0.3s;
+    transition: filter 0.3s, -webkit-filter 0.3s;
+  }
+  .footer__service-logo:hover {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+@media (min-width: 1600px) {
+  .footer {
+    bottom: -50px;
+  }
+}/*# sourceMappingURL=Footer.module.css.map */

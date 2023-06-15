@@ -1,0 +1,43 @@
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.input input[type=number]::-webkit-inner-spin-button,
+.input input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input__increment, .input__decrement {
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+  background: none;
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.input__increment {
+  border-left-style: none;
+}
+.input__decrement {
+  border-right-style: none;
+}
+.input__counter {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.input__counter::-webkit-outer-spin-button, .input__counter::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input__counter {
+  height: 40px;
+  width: 60px;
+  padding: 8px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgb(34, 34, 34);
+  border: 1px solid rgb(170, 170, 170);
+}/*# sourceMappingURL=QuantityInput.module.css.map */

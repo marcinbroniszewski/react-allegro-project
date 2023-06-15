@@ -58,8 +58,10 @@ const cartSlice = createSlice({
 
 				state.items = filteredArray
 			}
+		},
+		clearCart(state) {
+			return initialState
 		}
-		
 	},
 })
 
@@ -69,4 +71,4 @@ const persistConfig = {
 }
 
 export default persistReducer(persistConfig, cartSlice.reducer)
-export const { addToCart, removeFromCart, updateItemQuantity, deleteFromCart } = cartSlice.actions
+export const { addToCart, removeFromCart, updateItemQuantity, deleteFromCart, clearCart } = cartSlice.actions
