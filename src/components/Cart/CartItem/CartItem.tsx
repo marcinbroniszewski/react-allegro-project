@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { updateItemQuantity, deleteFromCart } from '../../../store/cart-slice'
 import styles from './CartItem.module.scss'
+import smartIcon from '../../img/smart-icon.svg'
 
 interface CartItemProps {
 	item: CartItemInterface
@@ -25,11 +26,19 @@ const deleteFromCartHandler = () => {
  }
 	return (
 		<li className={styles.product}>
-			<img src={item.img} alt={item.name} className={styles['product__img']} />
-			<span>{item.name}</span>
-			<span>{item.price.toFixed(2).toString().replace('.', ',')}</span>
-			<button className={styles['product__bin-btn']}><i className={styles['product__bin']} onClick={deleteFromCartHandler}></i></button>
-			<QuantityInput value={quantity} min='1' max='10' setValue={setQuantity}/>
+			<div className={styles['product__box']}>
+				<div className={styles['product__img-box']}>
+					<img src={item.img} alt={item.name} className={styles['product__img']} />
+					<span className={styles['product__name']}>{item.name}</span>
+				</div>
+				<button className={styles['product__bin-btn']}><i className={styles['product__bin']} onClick={deleteFromCartHandler}></i></button>
+			</div>
+			<div className={styles['product__details']}>
+				<QuantityInput value={quantity} min='1' max='10' setValue={setQuantity}/>
+				<span className={styles['product__price']}>{item.price.toFixed(2).toString().replace('.', ',')} zł</span>
+			</div>
+			<div className={styles['product__hr']}></div>
+			<p className={styles['product__smart-text']}><span className={styles['product__smart-text-span']}>darmowa dostawa</span> z pakietem <img className={styles['product__smart-icon']} src={smartIcon} alt="smart icon" /></p>
 		</li>
 	)
 }

@@ -1,0 +1,42 @@
+.emptycart {
+    max-width: 1200px;
+    min-height: 45vh;
+    margin: 0 auto;
+    padding: 24px;
+
+    &__h1 {
+        margin: 19px 0;
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: rgb(132, 148, 159);
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        color: rgb(132, 148, 159);
+    }
+
+    &__img {
+        width: 80%;
+        max-height: 473px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 768px) {
+    .emptycart {
+        display: flex;
+        margin: 5rem auto;
+
+        &__text-box, &__img-box {
+            width: 50%;
+        }
+
+        &__text-box {
+            margin-left: 3rem;
+        }
+    }
+
+
+}
