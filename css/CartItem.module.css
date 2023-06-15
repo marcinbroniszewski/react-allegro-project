@@ -77,6 +77,19 @@
   margin-left: 4px;
   vertical-align: middle;
 }
+.product__max-quantity {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  color: #656565;
+}
+.product__quantity-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 @media (min-width: 768px) {
   .product__price {

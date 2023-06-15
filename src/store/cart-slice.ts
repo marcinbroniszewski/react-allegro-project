@@ -7,6 +7,7 @@ export interface CartItemInterface {
 	name: string
 	price: number
 	quantity: number
+	maxQuantity: number
 	img: string
 }
 

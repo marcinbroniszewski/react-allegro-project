@@ -76,6 +76,17 @@ margin-left: 2rem;
         margin-left: 4px;
         vertical-align: middle;
     }
+
+    &__max-quantity {
+        margin-left: 1rem;
+        font-size: 1.3rem;
+        color: #656565;
+    }
+
+    &__quantity-box {
+        display: flex;
+        align-items: center;
+    }
 }
 
 

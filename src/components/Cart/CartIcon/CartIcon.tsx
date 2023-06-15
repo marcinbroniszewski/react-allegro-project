@@ -16,8 +16,8 @@ interface Props {
 
 export default function CartIcon(props: Props) {
 	const cart = useSelector((state: { cart: CartState }) => state.cart.items)
-	const arrayOfQuantities = cart.map(item => item.quantity)
-	const totalQuantity = arrayOfQuantities.reduce((a: number, b: number) => a + b, 0)
+	const arrayOfQuantities: number[] = cart.map(item => +item.quantity)
+	const totalQuantity: number = arrayOfQuantities.reduce((a: number, b: number) => a + b, 0)
 
 	return (
 		<Link to='koszyk'>

@@ -24,6 +24,7 @@ export default function ProductLayout() {
 				name: data.title,
 				price: +data.price,
 				quantity: +quantity,
+				maxQuantity: +data.quantity,
 				totalPrice: +data.price * +quantity,
 				img: data.img,
 			})

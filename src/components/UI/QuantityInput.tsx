@@ -1,11 +1,10 @@
-import React, { Dispatch, SetStateAction } from 'react'
 import styles from './QuantityInput.module.scss'
 
 interface Props {
 	value: string
 	min: string
 	max: string
-	setValue: Dispatch<SetStateAction<string>>
+	setValue: any
 }
 
 export default function QuantityInput(props: Props) {
@@ -15,9 +14,13 @@ export default function QuantityInput(props: Props) {
 	const minNumber = +min 
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setValue(event.target.value)
-	}
-
+		const inputValue = event.target.value;
+		const inputValueNumber = +inputValue;
+	  
+		if (inputValue === '' || (inputValueNumber <= maxNumber && inputValueNumber >= minNumber)) {
+		  setValue(inputValue);
+		}
+	  };
 	const onIncrementHandler = () => {
 		if (valueNumber < maxNumber) {
 			valueNumber++
