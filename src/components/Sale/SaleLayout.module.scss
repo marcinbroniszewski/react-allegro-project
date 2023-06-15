@@ -55,6 +55,19 @@ input[type='number']::-webkit-inner-spin-button,
 	}
 
 	&__form-control {
+		-webkit-appearance: textfield;
+		-moz-appearance: textfield;
+		appearance: textfield;
+	  }
+	  
+	  &__form-control::-webkit-outer-spin-button,
+	  &__form-control::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	  }
+
+
+	&__form-control {
 		padding: 1.2rem 1.6rem;
 		width: 100%;
 		max-width: 100%;

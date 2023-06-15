@@ -27,7 +27,19 @@ input[type=number]::-webkit-outer-spin-button {
 	}
 
 	&__counter {
+		-webkit-appearance: textfield;
+		-moz-appearance: textfield;
+		appearance: textfield;
+	  }
+	  
+	  &__counter::-webkit-outer-spin-button,
+	  &__counter::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	  }
+	&__counter {
 		height: 40px;
+		width: 60px;
 		padding: 8px;
 		font-size: 1.4rem;
 		text-align: center;

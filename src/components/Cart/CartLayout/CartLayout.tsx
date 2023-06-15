@@ -26,8 +26,6 @@ export default function CartLayout() {
 		}
 	}
 
-	console.log(cart.length)
-
 	return (
 		<>
 			{cart.length === 0 && <CartEmpty />}

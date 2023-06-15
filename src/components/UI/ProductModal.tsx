@@ -14,9 +14,10 @@ interface Props {
 }
 
 export default function ProductModal(props: Props) {
+	const priceNumber = +props.price
 	const quntityString = props.quantity.toString()
 	const totalString = props.totalPrice.toFixed(2).toString().replace('.', ',')
-	const priceString = props.price.toString().replace('.', ',')
+	const priceString = priceNumber.toFixed(2).toString().replace('.', ',')
 
 	return ReactDOM.createPortal(
 		<div className={styles.modal} onClick={props.closeModal}>
