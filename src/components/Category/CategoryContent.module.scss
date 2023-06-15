@@ -2,6 +2,9 @@ $base-color: rgb(34,34,34);
 
 .category {
 
+max-width: 1200px;
+margin: 0 auto;
+
 &__header {
     padding: 1.6rem;
 }
@@ -66,4 +69,29 @@ transition: color .3s;
         font-size: 1.9rem;
     }
 
+}
+
+
+@media (min-width: 768px) {
+    .category {
+        &__h1 {
+            font-size: 2.4rem;
+        }
+
+        &__product-price {
+            font-size: 3rem;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .category {
+
+&__header {
+    padding: 2.4rem;
+}
+
+        &__h1 {
+            font-size: 3.2rem;
+        }
+    }
 }
