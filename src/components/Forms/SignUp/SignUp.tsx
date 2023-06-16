@@ -22,7 +22,7 @@ const SignUp: React.FC = () => {
 			)
 			navigate(-1)
 		} catch (error) {
-			console.log(error)
+			alert('Rejestracja nie powiodła się')
 		}
 	}
 

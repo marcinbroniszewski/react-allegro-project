@@ -9,8 +9,6 @@ export default function SearchResults() {
 	const params = useParams()
 	const matchingProducts = useSelector((state: RootState) => state.search.matchingObjects)
 
-	console.log(matchingProducts);
-
 	return (
 		<div className={styles.results}>
 			<section className={styles['results__header']}>

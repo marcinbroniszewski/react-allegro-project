@@ -22,7 +22,7 @@ const SignIn: React.FC = () => {
 			)
 			navigate(-1)
 		} catch (error) {
-			console.log(error)
+			alert('Logowanie nie powiodło się')
 		}
 	}
 
