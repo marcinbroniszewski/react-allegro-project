@@ -3,9 +3,13 @@ import styles from './MobileButton.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-export default function MobileButton() {
+interface Props {
+  searchHandler: () => void
+}
+
+export default function MobileButton(props: Props) {
   return (
-    <button className={styles.search}>
+    <button className={styles.search} onClick={props.searchHandler}>
 <FontAwesomeIcon icon={faMagnifyingGlass} className={styles['search__icon']} />
     </button>
   )

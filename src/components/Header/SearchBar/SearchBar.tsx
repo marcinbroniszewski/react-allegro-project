@@ -16,20 +16,31 @@ export default function SearchBar() {
 
 	const data: any = useLoaderData()
 	const searchRef = useRef<HTMLInputElement>(null)
-	const selectRef = useRef<HTMLSelectElement | null>(null);
+	const selectRef = useRef<HTMLSelectElement | null>(null)
 	const navigate = useNavigate()
 	const dispatch = useDispatch()
 
-	const mobileStructure = <MobileButton />
-
-	const searchClickHandler = () => {
+	const searchHandler = () => {
 		if (searchRef.current?.value && selectRef.current?.value) {
 			navigate(`/wyszukaj/${searchRef.current.value}`)
 
 			const matchingObjects = createMatchingObjects(data, searchRef.current.value, selectRef.current.value)
 			dispatch(setMatchingObjects(matchingObjects))
+		} else if (searchRef.current?.value) {
+			navigate(`/wyszukaj/${searchRef.current.value}`)
+
+			const matchingObjects = createMatchingObjects(data, searchRef.current.value, 'all-categories')
+			dispatch(setMatchingObjects(matchingObjects))
 		}
 	}
+
+	const searchOnKeyPressHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === 'Enter') {
+			searchHandler()
+		}
+	}
+
+	const mobileStructure = <MobileButton searchHandler={searchHandler} />
 
 	const tabletDesktopStructure = (
 		<>
@@ -47,20 +58,22 @@ export default function SearchBar() {
 					})}
 				</optgroup>
 			</select>
-			<Button text='szukaj' onClick={searchClickHandler} />
+			<Button text='szukaj' onClick={searchHandler} />
 		</>
 	)
 
 	return (
 		<div className={styles.search}>
-			<input type='text' placeholder='czego szukasz?' className={styles['search__input']} ref={searchRef} />
+			<input
+				type='text'
+				placeholder='czego szukasz?'
+				className={styles['search__input']}
+				ref={searchRef}
+				onKeyUp={searchOnKeyPressHandler}
+			/>
 			{isMobile && mobileStructure}
 			{isTablet && tabletDesktopStructure}
 			{isDesktop && tabletDesktopStructure}
 		</div>
 	)
 }
-
-
-
-
