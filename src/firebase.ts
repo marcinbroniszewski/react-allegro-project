@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCPa00moc251Am4g1tksUquzrYiuWhuBxg",
-  authDomain: "allegro-642ad.firebaseapp.com",
-  projectId: "allegro-642ad",
-  storageBucket: "allegro-642ad.appspot.com",
-  messagingSenderId: "609854136437",
-  appId: "1:609854136437:web:83af6ebfc91f6cf71d983c"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig)

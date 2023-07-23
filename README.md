@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# Sklep Internetowy - Projekt w React TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Opis
 
-## Available Scripts
+Projekt jest sklepem internetowym stworzonym jako aplikacja za pomocą React. Jest to kopia Allegro, z całą funkcjonalnością dla sklepu internetowego, takimi jak: przeglądanie kategorii, dodawanie produktów do koszyka, możliwością rejestracji oraz logowania, dodawanie nowych produktów.
 
-In the project directory, you can run:
+Sam projekt korzysta z API, dzięki któremu tworzy dynamiczne kategorie, jak i całą strukturę aplikacji.
 
-### `npm start`
+Rejestracja nowych użytkowników oraz logowanie jest możliwa dzięki Firebase Authentication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Link do działającej wersji projektu: [Sklep Internetowy - Demo](https://allegro-642ad.web.app)
 
-### `npm test`
+## Instalacja
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aby uruchomić projekt lokalnie, wykonaj poniższe kroki:
 
-### `npm run build`
+1. Sklonuj repozytorium:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```git clone https://github.com/marcinbroniszewski/react-allegro-project```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Przejdź do odpowiedniego folderu:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```cd react-allegro-project```
 
-### `npm run eject`
+3. Zainstaluj zależności:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```npm install```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Uruchom projekt:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```npm start```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Projekt powinien być dostępny na `http://localhost:3000/`.
 
-## Learn More
+## Funkcje
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Przeglądanie produktów
+- Dodawanie produktów do koszyka
+- Rejestracja i logowanie użytkowników
+- Dodawanie nowych produktów
+- Dynamiczne kategorie produktów oparte na danych z API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Zależności
+
+- React
+- TypeScript
+- Redux Toolkit
+- Firebase
+- Redux Persist
+- Fontawesome
+- React Slick
+
+## Konfiguracja
+
+Projekt korzysta z Firebase do uwierzytelniania użytkowników i przechowywania danych. Aby skonfigurować połączenie z Firebase, dodaj plik `.env` w głównym katalogu projektu z poniższymi zmiennymi środowiskowymi:
+
+```REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_firebase_app_id
+```
+## Kontakt
+
+Jeśli masz jakieś pytania, sugestie lub chciałbyś zgłosić błąd, skontaktuj się ze mną przez [e-mail](mailto:mk.broniszewski@gmail.com).
